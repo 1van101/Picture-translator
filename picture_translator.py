@@ -7,6 +7,8 @@ from googletrans import Translator
 path_to_tesseract = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 # make a path to the folder with the photos
+# you can download a testing picture from here:
+# https://github.com/1van101/Picture-translator/blob/main/poem.jfif
 path_to_images_folder = r"C:\my_folder\test\\"
 
 pytesseract.tesseract_cmd = path_to_tesseract
@@ -23,7 +25,7 @@ res = pytesseract.image_to_string(img)
 translator = Translator()
 
 # translates the text into BG language. You can choose any language from here:
-# https://github.com/1van101/My-projects/blob/main/picture_translator/supported_languages_from_google_translator.txt
+# https://github.com/1van101/Picture-translator/blob/main/supported_languages.txt
 translated_text = translator.translate(res, dest='bg')
 
 print(f"Original text here:\n{res}")
