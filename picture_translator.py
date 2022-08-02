@@ -28,6 +28,8 @@ translator = Translator()
 # https://github.com/1van101/Picture-translator/blob/main/supported_languages.txt
 translated_text = translator.translate(res, dest='bg')
 
-print(f"Original text here:\n{res}")
-print("\n")
-print(f"Translated text here:\n{translated_text.text}")
+with open('translated_text.txt', mode ='w', encoding='utf-8') as file:
+  file.write(res)
+  file.write("\n")
+  file.write(translated_text.text)
+  print("Ready!")
